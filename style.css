@@ -103,3 +103,51 @@ img {
     text-align: right;
     padding: 3em 3em;
 }
+/* ========== SIDE NAVIGATION ========== */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: #222;
+    padding-top: 80px;
+    border-right: 2px solid #444;
+    z-index: 900;
+}
+
+.side-nav a {
+    display: block;
+    color: #ddd;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-bottom: 1px solid #333;
+    transition: background 0.2s, color 0.2s;
+}
+
+.side-nav a:hover {
+    background: #333;
+    color: #f1c40f;
+}
+
+.side-nav a.active {
+    background: #333;
+    color: #f1c40f;
+    border-left: 4px solid #f1c40f;
+}
+
+/* Push the main content to the right so it doesn’t sit under the sidebar */
+body {
+    margin-left: 220px;
+}
+
+/* On phones, hide the sidebar and put a simpler menu later if needed */
+@media (max-width: 800px) {
+    .side-nav {
+        display: none;
+    }
+    body {
+        margin-left: 0;
+    }
+}
